@@ -11,6 +11,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(todoRoute);
 
-const port = 3000;
+const PORT = 3000;
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(process.env.PROT || 5000, () =>
+  console.log(`Sever running on port ${PORT}!`)
+);
