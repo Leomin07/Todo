@@ -13,6 +13,10 @@ app.use(todoRoute);
 
 const PORT = 3000;
 
+app.get('/', (req, res) => {
+  res.send('hello user');
+});
+
 app.listen(process.env.PROT || 5000, () =>
   console.log(`Sever running on port ${PORT}!`)
 );
